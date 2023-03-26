@@ -1,0 +1,291 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Bioestadística aplicada a la restauración},
+  pdfauthor={Luis Balcázar},
+  pdflang={es},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Bioestadística aplicada a la restauración}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Instalación de programas}
+\author{Luis Balcázar}
+\date{Loja, abril 2023}
+
+\begin{document}
+\maketitle
+
+En este documento usted encontrará los \emph{links} para descargar los
+programas R, Rtools, RStudio, SAGA, y algunos paquetes de R. La
+instalación le tomará un tiempo estimado entre 20 y 30 minutos.
+
+Los datos para el curso se encuentran en el siguiente
+\href{https://github.com/lebalcazar/R_IITCA.git}{repositorio} (estará
+disponible minutos antes del taller). Es recomendable que usted tenga
+otro dispositivo aparte de su computador para ver la presentación y
+realizar los ejercicios en la máquina que tiene R y RStudio.
+
+Además, descargue los siguientes datos de
+\href{https://www.dropbox.com/s/tkkqyz2kaqoh4cj/DEM_Senegal.7z?dl=0}{Senegal}
+y
+\href{http://www.conabio.gob.mx/informacion/metadata/gis/dipoest00gw.xml?_xsl=/db/metadata/xsl/fgdc_html.xsl\&_indent=no}{México},
+para este último elegir SHP1 ``en coordenadas geográficas''.
+
+\hypertarget{instalaciuxf3n-de-r-y-rstudio}{%
+\subsection{Instalación de R y
+RStudio}\label{instalaciuxf3n-de-r-y-rstudio}}
+
+Ingrese a la página de \textbf{CRAN} (\emph{The Comprehensive \(R\)
+Archive Network}) en \href{https://cran.r-project.org/}{este link} y
+descargue \textbf{R} para el sistema operativo de su PC (Linux/Window) o
+Mac. En una PC Windows seleccione Download R for Windows/base y
+descargue la versión reciente 4.x.x. Además, para máquinas con Windows
+es necesario descargar \textbf{Rtools} del
+\href{https://cran.r-project.org/bin/windows/Rtools/}{siguiente link}.
+
+Para descargar \textbf{RStudio} ingrese en
+\href{https://rstudio.com/products/rstudio/}{este link} y seleccione la
+pestaña \emph{DOWNLOAD} (en la parte superior derecha) y luego
+\emph{RStudio Desktop} en la versión gratuita.
+
+Instale \textbf{R}, luego \textbf{Rtools} y finalmente \textbf{Rstudio},
+siga las indicaciones de instalación típica.
+
+\hypertarget{primera-sesiuxf3n-de-r-desde-rstudio}{%
+\subsection{Primera sesión de R desde
+RStudio}\label{primera-sesiuxf3n-de-r-desde-rstudio}}
+
+Ejecute RStudio y se cargará automáticamente R. Al abrir RStudio por
+primera vez se mostrará como en la Figura \ref{fig1}. Por defecto el
+entorno de RStudio tiene 4 paneles, los cuales se pueden modificar en la
+pestaña \emph{View/Panes}. Además, en la pestaña \emph{Tools} puede
+cambiar la configuración: color de fondo, tamaño y tipo de letra, etc.
+
+\begin{figure}
+\centering
+\includegraphics{rstudio.png}
+\caption{Interfaz de RStudio.\label{fig1}}
+\end{figure}
+
+En la Figura \ref{fig1}, el panel (1) es el \emph{\textbf{Editor}} de
+código (presione las teclas \texttt{Ctrl+Shift+N} para que aparezca), en
+el panel (2) se encuentran la \textbf{\emph{Console}} de R y el
+\emph{\textbf{Terminal}}, en el panel (3) se observan las pestañas
+\emph{\textbf{Environment}}, \emph{\textbf{History}} y otros, y en el
+panel (4) se encuentran las opciones \textbf{\emph{Files}},
+\emph{\textbf{Packages}}, \emph{\textbf{Plots}} y \textbf{Help}.
+
+\hypertarget{instalaciuxf3n-de-paquetes}{%
+\subsection{Instalación de paquetes}\label{instalaciuxf3n-de-paquetes}}
+
+El programa \texttt{base} de R tiene un amplio conjunto de librerías
+para hacer análisis de datos y estadístico, así como gráficos de alta
+calidad. Sin embargo, existen otros paquetes que son útiles para mejorar
+los resultados y reducir las líneas de código.
+
+En la consola de RStudio escriba \texttt{install.packages()}, como se
+muestra en las líneas siguientes, para instalar las librerías tidyverse,
+tmap, lubridate y raster.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{\textquotesingle{}tidyverse\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}tmap\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}lubridate\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}raster\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Para cargar las librerías en la sesión de R utilice la función
+\texttt{library()}. Observe que para cargar los paquetes, no se utiliza
+las comillas en los nombres:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# librerías que se cargarán en la sesión de R}
+\FunctionTok{library}\NormalTok{(tidyverse)  }\CommentTok{\# familia de paquetes para el análisis de datos}
+\FunctionTok{library}\NormalTok{(tmap)       }\CommentTok{\# creación de mapas temáticos}
+\FunctionTok{library}\NormalTok{(lubridate)  }\CommentTok{\# procesamiento de fecha y tiempo}
+\FunctionTok{library}\NormalTok{(raster)     }\CommentTok{\# análisis de datos raster}
+\end{Highlighting}
+\end{Shaded}
+
+Una vez cargada(s) la(s) librería(s) en la sesión de R, abrir la ayuda
+de los paquetes para familiarse con ellos, escriba en la consola o
+editor: \texttt{?raster}, \texttt{?tmap}, \texttt{help("tmap")}, etc., o
+desde el panel \texttt{Help} puede navegar en la ayuda.
+
+Instale estos otros paquetes:
+\texttt{"sf",\ "ggmap",\ "mapproj",\ "osmar",\ "tidyverse",\ "RColorBrewer","dplyr",\ "RgoogleMaps",\ "OpenStreetMap",\ "devtools",\ \ "DT",\ "raster",\ "rgdal",\ "rworldxtra",\ \textquotesingle{}grDevices\textquotesingle{},\ \textquotesingle{}ggsn\textquotesingle{},\ \textquotesingle{}tmap\textquotesingle{},\ \textquotesingle{}utils\textquotesingle{},\ \textquotesingle{}viridis\textquotesingle{},\ "datos",\ \textquotesingle{}RColorBrewer\textquotesingle{},\ \textquotesingle{}RSAGA\textquotesingle{},\ \textquotesingle{}cptcity\textquotesingle{}}.
+Utilizar \texttt{install.packages()} como se mostró anteriormente.
+
+Si alguna librería no se instala, ejecute las siguientes líneas, y
+vuelva a instalar:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{options}\NormalTok{(}\AttributeTok{download.file.method =} \StringTok{\textquotesingle{}libcurl\textquotesingle{}}\NormalTok{) }\CommentTok{\# para conectar con la URL del paquete }
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{\textquotesingle{}nombre\_del\_paquete\textquotesingle{}}\NormalTok{, }\AttributeTok{dependences =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Otra opción para instalar paquetes es descargando los archivos binarios
+desde la página de CRAN: \url{https://cran.r-project.org/} ver la Figura
+\ref{fig2}. Se descargan los archivos en un .zip. Luego en la pestaña
+Tools de RStudio ir a la pestaña Tools/Install Packages/Package Archive
+File y buscar la carpeta que contiene el archivo .zip.
+
+\begin{figure}
+\centering
+\includegraphics{lista_paquetes.png}
+\caption{Lista de paquetes de R.\label{fig2}}
+\end{figure}
+
+En otras ocasiones (\textbf{NO SERÁ NECESARIO EN ESTE TALLER}) los
+programas no están en CRAN y se instalan desde un servicio git (github,
+gitlab o bitbucket) o Subversion, se utiliza el paquete \emph{remotes} o
+\emph{devtools} de la siguiente manera:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"remotes"}\NormalTok{)}
+\CommentTok{\# sin cargar las librerías remotes o devtools}
+\NormalTok{remotes}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{\textquotesingle{}autor/package\_name\textquotesingle{}}\NormalTok{)}
+
+\CommentTok{\# cargando la librería remotes o devtools}
+\FunctionTok{library}\NormalTok{(remotes)}
+\FunctionTok{install\_gitlab}\NormalTok{(}\StringTok{\textquotesingle{}autor/package\_name\textquotesingle{}}\NormalTok{)}
+
+\CommentTok{\#Una vez instalado, se puede cargar la librería normalmente}
+\FunctionTok{library}\NormalTok{(package\_name)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{instalar-saga-gis}{%
+\subsection{Instalar SAGA GIS}\label{instalar-saga-gis}}
+
+Descargar e instalar SAGA desde el siguiente
+\href{https://sourceforge.net/projects/saga-gis/files/}{link}. Elija la
+versión 6.3 que ha sido testeada con la versión de RSAGA.
+
+\begin{figure}
+\centering
+\includegraphics{saga.png}
+\caption{Sitio web de SAGA.}
+\end{figure}
+
+\end{document}

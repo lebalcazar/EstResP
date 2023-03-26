@@ -1,0 +1,45 @@
+---
+title: "Bioestadística aplicada a la restauración"
+author: "Luis Balcázar"
+date: "Loja, abril 2023"
+output:
+  pdf_document: default
+  html_document:
+  pdf_print: paged
+subtitle: Instalación de programas
+urlcolor: blue
+citecolor: blue
+linkcolor: blue
+lang: es
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+En este documento usted encontrará los *links* para descargar los programas R, Rtools, RStudio, y algunos paquetes de R. La instalación le tomará un tiempo estimado entre 20 y 30 minutos. 
+
+## Instalación de R y RStudio
+
+Ingrese a la página de **CRAN** (*The Comprehensive $R$ Archive Network*) en [este link](https://cran.r-project.org/)  y descargue **R** para el sistema operativo de su PC (Linux/Window) o macOS. En una PC Windows seleccione Download R for Windows/base y descargue la versión reciente 4.x.x. Además, para máquinas con Windows es necesario descargar **Rtools** del [siguiente link](https://cran.r-project.org/bin/windows/Rtools/).
+
+
+Para descargar **RStudio** ingrese a la página de `posit` en [este link](https://rstudio.com/products/rstudio/) y seleccione la pestaña _DOWNLOAD RSTUDIO_ (en la parte superior derecha) y luego _RStudio Desktop_  en la versión gratuita. 
+
+Instale **R**, luego **Rtools** y finalmente **Rstudio**, siga las indicaciones de instalación típica.
+
+## Primera sesión de R desde RStudio
+
+Los datos para el curso se encuentran en el siguiente  [repositorio](https://github.com/lebalcazar/EstResP).
+
+El proyecto en R tiene los siguientes archivos y carpetas: 
+
+1) `.Rproj`, es el archivo del proyecto `EstResP.Rproj`.
+
+2) `R`, la carpeta R contiene todos los programas en lenguaje R, por ejmplo `introduccion.R`.
+
+3) `data`, la carpeta data contiene los archivos de los datos que se va a procesar. 
+
+4) `salidas`, la carpeta salidas está vacía allí se guardan la inforación de salida: figuras, tablas, etc.
+
