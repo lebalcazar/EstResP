@@ -1,12 +1,12 @@
 ---
-title: "Bioestadística aplicada a la restauración"
-author: "Luis Balcázar"
+title: "Universidad Nacional de Loja"
+author: "Luis E. Balcázar"
 date: "Loja, abril 2023"
 output:
   pdf_document: default
   html_document:
   pdf_print: paged
-subtitle: Instalación de programas
+subtitle: "*Maestría en Restauración de Paisajes Topicales*  \n.   \n**Bioestadística**"
 urlcolor: blue
 citecolor: blue
 linkcolor: blue
