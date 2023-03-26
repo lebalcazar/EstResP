@@ -1,0 +1,11 @@
+Numero de parcelas,Nivel de degradacion,Numero de parcelas,Nivel de degradacion,Numero de parcelas,Nivel de degradacion,Numero de parcelas,Nivel de degradacion,Numero de parcelas,Nivel de degradacion
+1,severo,11,severo,21,leve,31,severo,41,severo
+2,moderado,12,severo,22,severo,32,leve,42,ninguno
+3,leve,13,leve,23,ninguno,33,moderado,43,severo
+4,moderado,14,severo,24,moderado,34,leve,44,severo
+5,leve,15,moderado,25,severo,35,severo,45,leve
+6,moderado,16,severo,26,moderado,36,ninguno,46,moderado
+7,ninguno,17,severo,27,severo,37,severo,47,severo
+8,severo,18,moderado,28,severo,38,moderado,48,leve
+9,leve,19,ninguno,29,moderado,39,severo,49,moderado
+10,moderado,20,severo,30,ninguno,40,moderado,50,severo
