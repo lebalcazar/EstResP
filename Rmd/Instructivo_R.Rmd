@@ -18,28 +18,40 @@ lang: es
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 ```
 
-En este documento usted encontrará los *links* para descargar los programas R, Rtools, RStudio, y algunos paquetes de R. La instalación le tomará un tiempo estimado entre 20 y 30 minutos. 
+En este documento, usted encontrará los *links* para descargar los programas R, Rtools, RStudio, y algunos paquetes de R. Además, un gestor bibliográfico para la presentación de su proyecto final o notas de curso. Para este curso sugiero Zotero o Mendeley.
+
+La instalación le tomará un tiempo estimado entre 20 a 30 minutos. 
+
+Es muy importante que todos tengan una compudara portatil para las clases presenciales.
 
 ## Instalación de R y RStudio
 
 Ingrese a la página de **CRAN** (*The Comprehensive $R$ Archive Network*) en [este link](https://cran.r-project.org/)  y descargue **R** para el sistema operativo de su PC (Linux/Window) o macOS. En una PC Windows seleccione Download R for Windows/base y descargue la versión reciente 4.x.x. Además, para máquinas con Windows es necesario descargar **Rtools** del [siguiente link](https://cran.r-project.org/bin/windows/Rtools/).
 
 
-Para descargar **RStudio** ingrese a la página de `posit` en [este link](https://rstudio.com/products/rstudio/) y seleccione la pestaña _DOWNLOAD RSTUDIO_ (en la parte superior derecha) y luego _RStudio Desktop_  en la versión gratuita. 
+Para descargar **RStudio** ingrese a la página de `posit` en [este link](https://rstudio.com/products/rstudio/) y seleccione la pestaña _DOWNLOAD RSTUDIO_ (en la parte superior derecha) y luego _RStudio Desktop_  en la versión gratuita para el sistema operativo de su computadora. 
 
 Instale **R**, luego **Rtools** y finalmente **Rstudio**, siga las indicaciones de instalación típica.
 
-## Primera sesión de R desde RStudio
+Para instalar paquetes/librerías de R desde cran utilizamos lo siguientes:
+```{r, eval=FALSE}
+install.packages("tidyverse")
+install.packages("devtools")
+```
 
-Los datos para el curso se encuentran en el siguiente  [repositorio](https://github.com/lebalcazar/EstResP).
+Instalar paquetes/librerías desde un repositorio de git
+```{r, eval=FALSE}
+devtools::install_github("usuario/libreria")
+devtools::install_gitlab("usuario/libreria")
+```
 
-El proyecto en R tiene los siguientes archivos y carpetas: 
 
-1) `.Rproj`, es el archivo del proyecto `EstResP.Rproj`.
+Descaragr e instalar Zotero desde este [link](https://www.zotero.org).
 
-2) `R`, la carpeta R contiene todos los programas en lenguaje R, por ejmplo `introduccion.R`.
 
-3) `data`, la carpeta data contiene los archivos de los datos que se va a procesar. 
 
-4) `salidas`, la carpeta salidas está vacía allí se guardan la inforación de salida: figuras, tablas, etc.
+
+
+
+
 
